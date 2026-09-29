@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Things & Demonstrative Pronouns</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:"Trebuchet MS",Arial,sans-serif;
+  background:linear-gradient(135deg,#fff5df,#eaf7ff);
+  color:#493b53; min-height:100vh; overflow-x:hidden;
+}
+.book{width:min(1100px,94vw);margin:24px auto 12px}
+.page{
+  display:none; min-height:680px; padding:44px 55px 70px; position:relative;
+  border-radius:26px; background:#fffdf8; box-shadow:0 15px 40px #5b496225;
+  overflow:hidden; border:5px solid #f3d9a5;
+}
+.page.active{display:block;animation:open .55s ease}
+@keyframes open{from{opacity:0;transform:rotateY(-12deg) scale(.97)}to{opacity:1;transform:none}}
+h1{font-size:48px;margin:8px 0;color:#e56d65}
+h2{font-size:36px;color:#4d8f9c;margin:5px 0 20px}
+h3{font-size:25px}
+p{font-size:22px;line-height:1.45}
+.subtitle{font-size:25px}
+.cover{
+  text-align:center; background:linear-gradient(#fffdf8 55%,#fff0d2);
+}
+.cover h1{margin-top:85px}
+.small{font-size:17px}
+.balloon{position:absolute;font-size:55px;animation:float 3s ease-in-out infinite}
+.b1{left:8%;top:8%}.b2{right:9%;top:12%;animation-delay:.5s}.b3{left:14%;bottom:15%;animation-delay:1s}.b4{right:13%;bottom:17%;animation-delay:1.5s}
+@keyframes float{50%{transform:translateY(-15px) rotate(3deg)}}
+.cake{font-size:130px;margin:28px auto}
+.pop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:25px}
+.card{
+ background:#fff5db;border:3px solid #f2c777;border-radius:20px;padding:15px;text-align:center;
+ transition:.25s; box-shadow:0 7px 0 #e8c98e;
+}
+.card:hover{transform:translateY(-10px) scale(1.03)}
+.card{cursor:pointer}
+.pronouns .pbox{cursor:pointer;transition:.2s}
+.pronouns .pbox:hover{transform:translateY(-5px)}
+.sound-hint{font-size:16px;color:#7b6b63;margin-top:8px}
+.listen-btn{background:#e56d65;box-shadow:0 5px 0 #b84e48}
+.icon{font-size:72px;display:block;filter:drop-shadow(0 6px 3px #0001)}
+.word{font-size:24px;font-weight:bold;color:#d45d62}
+.example{background:#eef9fa;border-left:7px solid #63aab2;padding:14px 20px;border-radius:15px;margin:18px 0}
+.pronouns{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.pbox{padding:20px;border-radius:22px;min-height:170px}
+.this{background:#e7f7ed;border:4px solid #8bc7a4}
+.that{background:#fff0e4;border:4px solid #e8a66f}
+.these{background:#eaf2ff;border:4px solid #86a9db}
+.those{background:#f7eaff;border:4px solid #b68bd2}
+.pbox strong{font-size:34px}
+.pbox .emoji{font-size:52px}
+.rule{font-size:21px}
+.activity{background:#fff7d9;border:4px dashed #e6ba4f;border-radius:20px;padding:22px}
+.options{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+button,.nav button{
+ border:0;border-radius:14px;padding:13px 20px;font-size:19px;font-weight:bold;cursor:pointer;
+ background:#63aab2;color:white;box-shadow:0 5px 0 #447e84;transition:.15s
+}
+button:hover{transform:translateY(-2px)}
+button:active{transform:translateY(3px);box-shadow:0 2px 0 #447e84}
+.answer{margin-top:14px;font-size:22px;font-weight:bold;min-height:32px}
+.correct{color:#32854e}.wrong{color:#c34d4d}
+.nav{display:flex;justify-content:center;gap:18px;margin:17px auto}
+.nav button:disabled{opacity:.35;cursor:not-allowed}
+.page-no{position:absolute;right:25px;bottom:18px;color:#9c8d82;font-weight:bold}
+.pop-object{font-size:100px;text-align:center;display:inline-block;animation:pop 1.1s ease}
+@keyframes pop{0%{transform:translateY(90px) scale(.4);opacity:0}70%{transform:translateY(-12px) scale(1.08)}100%{transform:none;opacity:1}}
+.story{
+display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center
+}
+.scene{background:#f8fbff;border:4px solid #a8c9d2;border-radius:24px;padding:25px;text-align:center}
+.dialogue{background:#fff2e8;border-radius:18px;padding:20px;font-size:23px}
+.quiz-card{background:#f7f1ff;border:3px solid #c3a7df;border-radius:20px;padding:22px;margin:14px 0}
+@media(max-width:750px){
+ .page{padding:30px 25px 65px;min-height:720px}h1{font-size:38px}h2{font-size:30px}
+ .pop-grid{grid-template-columns:repeat(2,1fr)}.pronouns,.story{grid-template-columns:1fr}
+ p{font-size:19px}.subtitle{font-size:21px}
+}
+</style>
+</head>
+<body>
+<div class="book">
+
+<section class="page active cover">
+<div class="balloon b1">🎈</div><div class="balloon b2">🎈</div><div class="balloon b3">🎁</div><div class="balloon b4">🎂</div>
+<h1>🎉 My Birthday Party! 🎉</h1>
+<p class="subtitle">Digital Pop-Up Book</p>
+<div class="cake">🎂</div>
+<h2>Birthday Things & Demonstrative Pronouns</h2>
+<p>Let's learn with Miss Dea! 💕</p>
+<p class="small">Klik tombol NEXT untuk membuka halaman.</p>
+</section>
+
+<section class="page">
+<h2>🎁 Page 1 — Birthday Things</h2>
+<p>Look! What can you see at a birthday party?</p>
+<div class="pop-grid">
+<div class="card" onclick="speak('cake')"><span class="icon">🎂</span><span class="word">cake</span><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="card" onclick="speak('balloon')"><span class="icon">🎈</span><span class="word">balloon</span><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="card" onclick="speak('present')"><span class="icon">🎁</span><span class="word">present</span><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="card" onclick="speak('candle')"><span class="icon">🕯️</span><span class="word">candle</span><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="card" onclick="speak('party hat')"><span class="icon">🎉</span><span class="word">party hat</span><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="card" onclick="speak('cupcake')"><span class="icon">🍰</span><span class="word">cupcake</span><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="card" onclick="speak('ribbon')"><span class="icon">🎀</span><span class="word">ribbon</span><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="card" onclick="speak('candy')"><span class="icon">🍬</span><span class="word">candy</span><div class="sound-hint">🔊 Click to hear</div></div>
+</div>
+<p class="example"><b>Say it!</b> Cake — balloon — present — candle.<br><button class="listen-btn" onclick="speak('Cake. Balloon. Present. Candle.')">🔊 Listen</button></p>
+</section>
+
+<section class="page">
+<h2>✨ Page 2 — Pop-Up Party!</h2>
+<p>Imagine the birthday room opening in front of you!</p>
+<div class="scene">
+<div class="pop-object">🎂</div>
+<div class="pop-object" style="animation-delay:.15s">🎈</div>
+<div class="pop-object" style="animation-delay:.3s">🎁</div>
+<div class="pop-object" style="animation-delay:.45s">🕯️</div>
+<h3>Happy Birthday! 🎉</h3><button class="listen-btn" onclick="speak('Happy Birthday!')">🔊 Listen</button>
+</div>
+<div class="example">
+<b>Miss Dea says:</b><br>
+“Look! This is a cake.”<br>
+“Look! That is a present.”
+</div>
+</section>
+
+<section class="page">
+<h2>👀 Page 3 — Look Near & Far</h2>
+<p>Now let's learn four special words.</p>
+<div class="pronouns">
+<div class="pbox this" onclick="speak('this')"><strong>THIS</strong><div class="emoji">🎂</div><div class="rule">1 thing • near</div><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="pbox that" onclick="speak('that')"><strong>THAT</strong><div class="emoji">🎁</div><div class="rule">1 thing • far</div><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="pbox these" onclick="speak('these')"><strong>THESE</strong><div class="emoji">🎈🎈</div><div class="rule">many things • near</div><div class="sound-hint">🔊 Click to hear</div></div>
+<div class="pbox those" onclick="speak('those')"><strong>THOSE</strong><div class="emoji">🎉🎉</div><div class="rule">many things • far</div><div class="sound-hint">🔊 Click to hear</div></div>
+</div>
+</section>
+
+<section class="page">
+<h2>📖 Page 4 — The Easy Rule</h2>
+<div class="activity">
+<h3>Remember this!</h3>
+<p>☝️ <b>ONE + NEAR = THIS</b></p>
+<p>👉 <b>ONE + FAR = THAT</b></p>
+<p>☝️☝️ <b>MANY + NEAR = THESE</b></p>
+<p>👉👉 <b>MANY + FAR = THOSE</b></p>
+</div>
+<div class="example">
+<b>Examples:</b><br>
+🎂 This is a cake. <br>
+🎁 That is a present. <br>
+🎈🎈 These are balloons. <br>
+🎉🎉 Those are party hats.
+</div>
+</section>
+
+<section class="page">
+<h2>🔎 Page 5 — Let's Look!</h2>
+<p>Choose the correct word.</p>
+<div class="quiz-card">
+<h3>1. 🎂 (one thing + near)</h3>
+<div class="options"><button onclick="check(this,'correct','answer1')">THIS</button><button onclick="check(this,'wrong','answer1')">THAT</button></div>
+<div id="answer1" class="answer"></div>
+</div>
+<div class="quiz-card">
+<h3>2. 🎁 (one thing + far)</h3>
+<div class="options"><button onclick="check(this,'wrong','answer2')">THIS</button><button onclick="check(this,'correct','answer2')">THAT</button></div>
+<div id="answer2" class="answer"></div>
+</div>
+</section>
+
+<section class="page">
+<h2>🎈 Page 6 — Near or Far?</h2>
+<div class="quiz-card">
+<h3>3. 🎈🎈 (many + near)</h3>
+<div class="options"><button onclick="check(this,'correct','answer3')">THESE</button><button onclick="check(this,'wrong','answer3')">THOSE</button></div>
+<div id="answer3" class="answer"></div>
+</div>
+<div class="quiz-card">
+<h3>4. 🎁🎁 (many + far)</h3>
+<div class="options"><button onclick="check(this,'wrong','answer4')">THESE</button><button onclick="check(this,'correct','answer4')">THOSE</button></div>
+<div id="answer4" class="answer"></div>
+</div>
+<div class="example">🌟 Great job! You are a Birthday Things Explorer!</div>
+</section>
+
+<section class="page">
+<h2>🗣️ Page 7 — Say It!</h2>
+<p>Complete the sentences. Look at the picture!</p>
+<div class="story">
+<div class="scene">
+<div style="font-size:90px">🎂</div>
+<p><b>Near • one</b></p>
+</div>
+<div class="dialogue"><b>_____ is a cake.</b><br><br>
+<button onclick="showText('s1','This is a cake!')">THIS</button>
+<button onclick="showText('s1','That is a cake!')">THAT</button>
+<div id="s1" class="answer"></div></div>
+<div class="scene">
+<div style="font-size:90px">🎈🎈</div>
+<p><b>Near • many</b></p>
+</div>
+<div class="dialogue"><b>_____ are balloons.</b><br><br>
+<button onclick="showText('s2','These are balloons!')">THESE</button>
+<button onclick="showText('s2','Those are balloons!')">THOSE</button>
+<div id="s2" class="answer"></div></div>
+</div>
+</section>
+
+<section class="page cover">
+<div class="balloon b1">🎈</div><div class="balloon b2">🎈</div>
+<h1>🎉 You Did It! 🎉</h1>
+<div class="cake">🏆</div>
+<h2>Birthday Things Explorer</h2>
+<p>You can name birthday things and use:</p>
+<p style="font-size:28px"><b>THIS • THAT • THESE • THOSE</b></p>
+<p>Keep learning and have fun with Miss Dea! 💕</p>
+</section>
+
+</div>
+<div class="nav">
+<button id="prev" onclick="move(-1)">◀ BACK</button>
+<button id="next" onclick="move(1)">NEXT ▶</button>
+</div>
+<script>
+let page=0, pages=document.querySelectorAll('.page');
+
+function speak(text){
+  if(!('speechSynthesis' in window)){
+    alert('Maaf, browser ini belum mendukung suara.');
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US';
+  u.rate = 0.82;
+  u.pitch = 1.05;
+  window.speechSynthesis.speak(u);
+}
+
+function render(){
+ pages.forEach((p,i)=>p.classList.toggle('active',i===page));
+ document.getElementById('prev').disabled=page===0;
+ document.getElementById('next').disabled=page===pages.length-1;
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function move(n){page=Math.max(0,Math.min(pages.length-1,page+n));render()}
+function check(btn,state,id){
+ let el=document.getElementById(id);
+ if(state==='correct'){el.textContent='✅ Correct! Great job!';el.className='answer correct'}
+ else{el.textContent='❌ Try again. Think: near or far?';el.className='answer wrong'}
+}
+function showText(id,text){document.getElementById(id).textContent='✨ '+text}
+render();
+</script>
+</body>
+</html>
